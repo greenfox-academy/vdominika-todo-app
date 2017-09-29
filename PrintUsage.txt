@@ -1,0 +1,8 @@
+Command Line Todo Application
+=============================
+
+Command line arguments:
+-l List all the tasks
+-a adds a new task
+-r Removes a task
+-c Completes a task
