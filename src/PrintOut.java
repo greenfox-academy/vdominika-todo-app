@@ -9,10 +9,12 @@ import java.io.IOException;
 public class PrintOut {
     public static void main(String[] args) {
 
-        if (args.length == 0){
+        if (args.length == 0) {
             menu();
-        } else if (args[0].equals ("-l")){
-            listingFunction ( );}
+        } else if (args[0].equals("-l")) {
+            listingFunction();
+        }
+    }
 //        }else if (args[0].equals ("-a")){
 //            addElement ();
 //        }else if (args[0].equals("-r")){
@@ -21,20 +23,22 @@ public class PrintOut {
 //            completionTask()
 
 
-        public static void menu(){
-        try {
-            Path filePath = Paths.get("/Users/dvittay/greenfox/vdominika-todo-app/PrintUsage.txt");
-            List<String> lines = Files.readAllLines(filePath);
-            for (int i = 0; i < lines.size (); i++) {
-                System.out.println (lines.get(i) );
+        public static void menu() {
+
+            try {
+                Path filePath = Paths.get("/Users/dvittay/greenfox/vdominika-todo-app/PrintUsage.txt");
+                List<String> lines = Files.readAllLines(filePath);
+                for (int i = 0; i < lines.size(); i++) {
+                    System.out.println(lines.get(i));
+                }
+            } catch (Exception e) {
+                System.out.println("Uh-oh, could not read the file!");
             }
-        } catch (Exception e) {
-            System.out.println("Uh-oh, could not read the file!");
         }
 
         public static void listingFunction(){
         Path filePath = Paths.get("/Users/dvittay/greenfox/vdominika-todo-app/src/testList.txt");
     }
-        }
+
 }
 

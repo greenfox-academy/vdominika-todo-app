@@ -9,5 +9,17 @@ import java.io.IOException;
 public class ToDoApp {
     public static void main(String[] args) {
 
+        Task t = new Task("ujFeladat");
+
+        t.setCompleted();
+        System.out.println(("This task is completed? " + t.getCompletedStatus()));
+
+        System.out.println(t.createdAt);
+        System.out.println(t.ID);
+        Task t2 = new Task("ufo");
+        System.out.println(t2.ID);
+
+        System.out.println();
+
     }
 }
